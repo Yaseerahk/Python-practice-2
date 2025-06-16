@@ -1,0 +1,6 @@
+Programming is the process of creating a set of instructions that tell a computer how to perform a task.
+Programming can be done using a variety of computer programming languages, such as Python, Java, and C++.
+
+This process often requires expertise in many different subjects, including knowledge of the application domain,
+specialized algorithms, and formal logic. The most important skill for a programmer is problem-solving.
+Effective programming is about finding efficient and elegant solutions to complex problems.
