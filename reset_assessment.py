@@ -3,9 +3,7 @@ import os
 
 # This script resets the assessment.py file to its original state.
 
-assessment_template = """# assessment.py
-import string
-
+assessment_template = """
 # A predefined list of common words to ignore in some analyses.
 COMMON_WORDS = ["the", "a", "is", "in", "of", "to", "and", "be", "that", "it"]
 
@@ -120,7 +118,7 @@ def find_longest_word(word_list: list[str]) -> str:
     pass
 
 
-def display_analysis_results(total_words: int, frequency: int, longest_word: str, target_word: str):
+def display_analysis_results(total_words: int, frequency: int, longest_word: str, target_word: str)-> None:
     \"\"\"
     TODO: Step 7 - Display the final analysis in a formatted way.
     
