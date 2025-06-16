@@ -1,8 +1,6 @@
-# reset_assessment.py
+
 import os
-
 # This script resets the assessment.py file to its original state.
-
 assessment_template = """
 # A predefined list of common words to ignore in some analyses.
 COMMON_WORDS = ["the", "a", "is", "in", "of", "to", "and", "be", "that", "it"]
