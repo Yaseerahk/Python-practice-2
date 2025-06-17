@@ -16,6 +16,7 @@ def get_filename(user_input: str or None) -> str:
     Returns:
         str: The effective filename to use.
     """
+    return user_input.strip() if user_input else 'sample_text.txt'
     pass
 
 
@@ -35,6 +36,12 @@ def read_text_file(filename: str) -> str:
     Returns:
         str: The content of the file, or an empty string if an error occurs.
     """
+    try:
+        with open(filename, 'r') as file:
+            return file.read()
+    except FileNotFoundError:
+        print("Error: File not found.")
+    return ""
     pass
 
 
@@ -57,6 +64,11 @@ def clean_and_tokenize_text(text: str) -> list[str]:
     Example:
         clean_and_tokenize_text("Hello, World!") should return ['hello', 'world']
     """
+    import string 
+    text=text.lower
+    text=text.translate(str.maketrans('','',string.punctuation))
+    return text.split
+
     pass
 
 
@@ -74,6 +86,7 @@ def count_total_words(word_list: list[str]) -> int:
     Returns:
         int: The total count of words in the list.
     """
+    return len(word_list)
     pass
 
 
@@ -91,6 +104,7 @@ def count_word_frequency(word_list: list[str], target_word: str) -> int:
     Returns:
         int: The number of times the target word appears.
     """
+    return word_list.count(target_word.lower())
     pass
 
 
@@ -110,6 +124,9 @@ def find_longest_word(word_list: list[str]) -> str:
     Returns:
         str: The longest word found in the list.
     """
+    if not word_list:
+        return " "
+    return max(word_list,key=len)
     pass
 
 
@@ -130,6 +147,10 @@ def display_analysis_results(total_words: int, frequency: int, longest_word: str
         longest_word (str): The longest word found.
         target_word (str): The word whose frequency was counted.
     """
+    print("--- Text Analysis Results ---")
+    print(f"Total words: {total_words}")
+    print(f"Longest word: '{longest_word}'")
+    print(f"Frequency of the word '{target_word}': {frequency}")
     pass
 
 
